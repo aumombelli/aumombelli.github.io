@@ -1,0 +1,5 @@
+Débutant / Capable de réaliser des choses simples
+Intermédiaire / Peut prendre part à un projet
+Avancé / Autonome excepté sur des sujets précis
+Competent / Autonomie complète de la technologie simple ou du domaine
+Autonome / Autonomie complète y compris des bibliothèques généralement utilisées
