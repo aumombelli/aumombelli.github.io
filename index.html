@@ -16,7 +16,7 @@
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<h1>Aurélien Mombelli</h1>
+<h1>Aurélien Mombelli</h1>
 				  <p>Ingénieur informatique<br>
 				  </p>
 </header>
@@ -407,9 +407,9 @@ et les écoles ou universités dans lesquels j'ai étudié.</p>
 					  mombelli.aurelien@gmail.com <br>
 				    via ce formulaire !</p>
 				</header>
-				<form method="post" action="mailto:mombelli.aurelien@gmail.com">
+				<form id="contactForm" method="post" action="mailto:mombelli.aurelien@gmail.com?subject=subject&message=message">
 					<div class="row gtr-50">
-						<div class="col-6 col-12-mobile"><input type="text" class="text" name="name" placeholder="Name" /></div>
+						<div class="col-6 col-12-mobile"><input type="text" class="text" name="name" placeholder="Nom" /></div>
 						<div class="col-6 col-12-mobile"><input type="text" class="text" name="email" placeholder="Email" /></div>
 						<div class="col-12">
 							<textarea name="message" placeholder="Message"></textarea>
@@ -588,7 +588,7 @@ et les écoles ou universités dans lesquels j'ai étudié.</p>
 	      </div>
     </section>
 		
-	<section id="menu">
+	<divv class="menuLeft" id="menu">
 	  <a href="javascript:void(0);" class="menuButton burger" onclick="toggleMenu()">
 		<i class="fa fa-bars"></i>
 	  </a>
@@ -596,18 +596,20 @@ et les écoles ou universités dans lesquels j'ai étudié.</p>
 			<a href="#etudes" class="scrolly menuButton" id="etudesMenu">Mon parcours étudiant</a><br>
 			<a href="#expPro" class="scrolly menuButton" id="expProMenu">Mes expériences professionnelles</a><br>
 			<a href="#passions" class="scrolly menuButton" id="passionsMenu">Mes passions &amp; loisirs</a><br>
-			<a href="#skills" class="scrolly menuButton" id="skillsMenu">Résumé de mes compétences</a>
-	  </div>
-	</section>
+			<a href="#skills" class="scrolly menuButton" id="skillsMenu">Résumé de mes compétences</a><br>
+			<a href="en/index.html" class="menuButton" id="en">English version</a>
+      </div>
+	</divv>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<!-- Scripts --> <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/gen_validatorv4.js"></script>
+
 			<script>
 				function omov(i) {
 					if (i >= 1) {
@@ -684,6 +686,11 @@ et les écoles ou universités dans lesquels j'ai étudié.</p>
 					if (checkVisible(sec4))
 						actif(menu4);
 				};
+				
+				var frmvalidator = new Validator("contactForm");
+				frmvalidator.addValidation("name",  "req",   "Veuillez renseigner votre nom s'il vous plaît");
+				frmvalidator.addValidation("email", "req",   "Veuillez renseigner votre adresse mail s'il vous plaît");
+				frmvalidator.addValidation("email", "email", "L'adresse mail renseignée est invalide");
 			</script>
 	</body>
 </html>
