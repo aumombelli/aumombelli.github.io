@@ -84,9 +84,9 @@ input, select, textarea {
 
 	body {
 		background-color: #183026;
-		background-image: url("images/overlay.png"), url("../../images/bg.webp");
+		background-image: url("../../images/bg.webp"), url("../../images/bg-alt.webp");
 		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
+		background-size: cover, 100% auto;
 		background-position: top left, center 0;
 		background-attachment: fixed, fixed;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -2012,7 +2012,7 @@ input, select, textarea {
 	#im1, #im2, #im3, #im4, #im5 {
 		width: 100px;
 		height: 100px;
-		background-image: url("../../images/competences/etoile_vide.png");
+		background-image: url("../../images/competences/etoile_vide.webp");
 		background-repeat: no-repeat;
 	}
 	
@@ -2025,6 +2025,12 @@ input, select, textarea {
 		position: fixed;
 		top: 1em;
 		right: 1em;
+	}
+
+	.flag {
+		display: flex;
+		justify-content: flex-end;
+		padding: 1.5em 2em 0 0;
 	}
 
 	#menuOptions {
@@ -2491,9 +2497,9 @@ input, select, textarea {
 
 			body {
 				background-color: #203936;
-				background-image: url("images/overlay.png"), url("../../images/bg-alt.webp");
+				background-image: url("../../images/bg.webp"), url("../../images/bg-alt.webp");
 				background-repeat: repeat, no-repeat;
-				background-size: auto, 100% auto;
+				background-size: cover, 100% auto;
 				background-position: top left, top center;
 				background-attachment: scroll, scroll;
 				font-size: 14pt;
