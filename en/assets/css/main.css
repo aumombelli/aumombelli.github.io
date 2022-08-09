@@ -1623,8 +1623,10 @@ input, select, textarea {
 /* Form */
 
 	form label {
-		display: block;
+		display: inline-flex;
 		margin: 0 0 0.5em 0;
+		text-align: left;
+		width: 180px;
 	}
 
 	form input[type="text"],
@@ -2848,4 +2850,7 @@ input, select, textarea {
 .fat {
 }
 .burger {
+}
+textarea {
+  resize: vertical; /* user can resize vertically, but width is fixed */
 }
